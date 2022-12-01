@@ -30,10 +30,8 @@ for (i in 1:nrow(seasons)) {
     next
   } else if (seasons$rush_attempt[i] == 1) {
     seasons$advanced_fp[i] <- unlist(rush_fp_yardline[yardline, 2])
-    print(i)
   } else if (seasons$pass_attempt[i] == 1) {
     seasons$advanced_fp[i] <- unlist(receiving_fp_yardline[yardline, 2])
-    print(i)
   }
 }
 
