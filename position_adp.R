@@ -23,6 +23,7 @@ wr_roster <- 7.5* teams_in_league
 te_starters <- 1 * teams_in_league
 te_roster <- 1.5 * teams_in_league
 
+# the qb/rb/wr/te files come from nfl_position_averages file. they need to be loaded in.
 qb_aves <- qb
 rb_ave <- rb
 wr_ave <- wr
@@ -66,6 +67,7 @@ l1 <- ggplot(data = value_over, aes(x=overall, y=tv, label=position))
 l2 <- l1 + geom_point()
 l2 + aes(color=position) + geom_text(hjust=0, vjust=0)
 
+# this is the adp file you want to use. load it in as a csv
 adp <- mixer
 length(adp$Player)
 
